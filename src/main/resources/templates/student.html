@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" th:replace="base::layout(~{::section})">
+
+<head>
+</head>
+
+<body>
+	<section>
+
+		<!-- login start -->
+		<div class="row mt-5">
+			<div class="col-sm-9 mx-auto rounded rounded-3 shadow shadow-lg" style="border:  2px solid #ef662f;">
+				<div class="row">
+					<h1 class="text-center mt-2" style="color: #ef662f; font-weight: 600; font-family: Jost, sans-serif;"> Student Login</h1>
+					<div class="col-sm-6">
+						<img src="images/6300830.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="col-sm-6">
+						<form class="row h-100 align-items-center" th:object="${dto}" method="post">
+
+							<div class="col-sm-12">
+								<label for="userid" class="form-label">Enter User Id (E-mail Address) </label>
+								<input type="email" class="form-control py-3" id="userid"
+									th:field="${dto.emailaddress}">
+							</div>
+							<div class="col-sm-12">
+								<label for="password" class="form-label">Password</label>
+								<input type="password" class="form-control py-3" id="password"
+									th:field="${dto.password}">
+							</div>
+							<div class="col-12 text-center  mt-4">
+								<button type="submit" class="btn  py-2 px-5"
+									style="background-color: #ef662f; color: #FFFFFF;"> Login</button>
+							</div>
+					</div>
+					
+					<div class="row"> 
+						<div class="col-sm-12">
+							<div th:if="${msg}">
+								<p th:text="${msg}" style="color: #ef662f;"></p>
+							</div>
+						</div>
+					</div>
+
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+		
+
+
+		<!-- login end -->
+
+
+
+		
+
+
+
+
+
+	</section>
+</body>
+
+</html>

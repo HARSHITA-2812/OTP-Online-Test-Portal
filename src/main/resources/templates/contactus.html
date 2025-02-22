@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html th:replace="base::layout(~{::section})">
+	<head></head>
+	<body>
+<section>
+	<div class="row">
+		
+	<h1 class="text-center"> Enquiry Form</h1>
+	<div th:if="${message}">
+		<p th:text="${message}" class="alert alert-success alert-dismissible"></p>
+		
+	</div>
+	<form class="form-group" method="post"  th:object="${dto}">
+		<table class="table table-bordered" style="margin:auto; width:60%;">
+			<tr>
+				<td>Enter Name</td>
+				<td>
+					<input type="text" required class="form-control" th:field="${dto.name}"/> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Select Gender
+				</td>
+				<td>
+					<input type="radio" required class="form-check-input" value="male" th:field="${dto.gender}"/> Male
+					<input type="radio" required class="form-check-input" value="female" th:field="${dto.gender}"/> Female 
+				</td>
+			</tr>
+			<tr>
+				<td> Enter Contact NUmber </td>
+				<td>
+					<input type="number" required class="form-control" value="contactno" th:field="${dto.contactno}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Enter Email Address</td>
+				<td>
+					<input type="email" required class="form-control" value="email" th:field="${dto.emailaddress}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Enquiry Text</td>
+				<td>
+					<textarea type="required" required class="form-control" th:field="${dto.enquirytext}"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</td>
+			</tr>
+			
+		</table>
+	</form>
+	</div>
+</section>
+</body>
+</html>

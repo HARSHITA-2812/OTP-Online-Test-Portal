@@ -1,0 +1,71 @@
+
+.myimg
+{
+background-image: url('../images/upcoming.jpg');
+
+  
+  /*background-color: red;*/ 
+  
+  height: 400px;
+  /* width:100% !important; */
+  
+  
+  
+
+}
+ 
+  
+  
+  
+
+
+.mycard
+{
+  height: 400px;
+  width: 270px;
+  border-radius: 20px;
+  
+}
+.mycard img
+{
+  border-radius: 20px;
+}
+.myimg1
+{
+background-image: url('../images/hhh.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-color: red; */
+  
+ height: 500px;
+  /* width:100% !important; */
+  
+  
+  
+
+}
+.ram img
+{
+  height: 500px;
+  padding-left: 140px;
+}
+
+.mycard1
+{
+  height: px;
+  width: 380px;
+  border-radius: 0px;
+}
+
+
+.footer
+{
+  background: linear-gradient(#f8781f 60%, rgb(255, 213, 0) );
+}
+.dileep
+{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" th:replace="base::layout(~{::section})">
+
+<head>
+</head>
+
+<body>
+	<section>
+		<div class="container-fluid"> 
+			<!-- application form start -->
+			<div class="row">
+				<div class="col-sm-12 text-center p-5"
+					style="background-color: #ef662f; font-family: Jost, sans-serif; font-size: 30px; font-weight: 700;">
+					<p>Application Form
+						<br>
+						<a href="index.html">
+							<button type="button" class="btn btn-outline-primary"><i
+									class="fa-solid fa-house"></i></button> </a>
+					</p>
+				</div>
+			</div>
+			<!-- application form end -->
+			<!-- form start -->
+
+			<div class="mt-2" th:if="${message}">
+				<p th:text="${message}" class="alert alert-success alert-dismissible"></p>
+			</div>
+
+
+			<form class="form-group" method="post" th:object="${sd}">
+				<div class="row  mt-4">
+					<div class="col-sm-10 p-4 mx-auto shadow-lg  ">
+						<div class="row pb-4">
+							<div class="col-md-6 ">
+								<label for="Enrollment" class="form-label"><b class="mt-4">Enrollment Number
+										*</b></label>
+								<input type="text" class="form-control border border-1 border-dark rounded-0 py-2 mt-2"
+									id="enrollment" placeholder="Enter Your Enrollment Number"
+									th:field="${sd.enrollmentno}">
+							</div>
+							<div class="col-md-6">
+								<label for="Name" class="form-label"><b class="mt-4">Name *</b></label>
+								<input type="text" class="form-control border border-1 border-dark rounded-0 py-2 mt-2"
+									id="enrollment" placeholder="Enter Your Name" th:field="${sd.name}">
+							</div>
+						</div>
+						<div class="row pb-4">
+							<div class="col-md-6">
+								<label for="Enrollment" class="form-label"><b class="mt-4">Contact Number</b></label>
+								<input type="text" class="form-control border border-1 border-dark rounded-0 py-2 mt-2"
+									id="enrollment" placeholder="Enter Your Mobile Number" th:field="${sd.contactno}">
+							</div>
+							<div class="col-md-6">
+								<label for="Name" class="form-label"><b class="mt-4">WhatsApp Number *</b></label>
+								<input type="text" class="form-control border border-1 border-dark rounded-0 py-2 mt-2"
+									id="enrollment" placeholder="Enter Your WhatsApp Number"
+									th:field="${sd.whatsappno}">
+							</div>
+						</div>
+						<div class="row pb-4">
+							<div class="col-md-6">
+								<label for="Enrollment" class="form-label"><b class="mt-4">Email *</b></label>
+								<input type="email" class="form-control border border-1 border-dark rounded-0 py-2 mt-2"
+									id="enrollment" placeholder="Enter Your Mobile Number"
+									th:field="${sd.emailaddress}">
+							</div>
+							<div class="col-md-6">
+								<label for="Enrollment" class="form-label"><b class="mt-4">Password *</b></label>
+								<input type="password"
+									class="form-control border border-1 border-dark rounded-0 py-2 mt-2" id="enrollment"
+									placeholder="Enter Your Mobile Number" th:field="${sd.password}">
+							</div>
+
+						</div>
+						<div class="row pb-4">
+							<div class="col-md-6">
+								<label for="Enrollment" class="form-label"><b class="mt-4">College Name *</b></label>
+								<select class="form-select border border-1 border-dark rounded-0 py-2 mt-2"
+									aria-label="Default select example" th:field="${sd.collegename}">
+									<option value="">-Select Your College-</option>
+									<option value="RR Institute of Technology">RR Institute of Technology</option>
+									<option value="Buddha  Institute of Technology">Buddha  Institute of  Technology</option>
+									<option value="SR Group of Institution">SR Group of Institution</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<label for="Enrollment" class="form-label"><b class="mt-4">Course *</b></label>
+								<select class="form-select border border-1 border-dark rounded-0 py-2 mt-2"
+									aria-label="Default select example" th:field="${sd.course}">
+									<option value="">-Select Your Course-</option>
+									<option value="B.Tech">B.Tech</option>
+									<option value="M.Tech">M.Tech</option>
+									<option value="BCA">BCA</option>
+								</select>
+							</div>
+
+						</div>
+						<div class="row pb-4">
+							<div class="col-md-6">
+								<label for="Enrollment" class="form-label"><b class="mt-4">Branch *</b></label>
+								<select class="form-select border border-1 border-dark rounded-0 py-2 mt-2"
+									aria-label="Default select example" th:field="${sd.branch}">
+									<option value="">-Select Your Branch-</option>
+									<option value="Computer Science">Computer Science</option>
+									<option value="Information Technology">Information Technology</option>
+									<option value="Artificial Intelligence">Artificial Intelligence</option>
+								</select>
+							</div>
+							<div class="col-sm-6">
+								<label for="Enrollment" class="form-label"><b class="mt-4">Year *</b></label>
+								<select class="form-select border border-1 border-dark rounded-0 py-2 mt-2"
+									aria-label="Default select example" th:field="${sd.year}">
+									<option value="">-Select Year-</option>
+									<option value="1st year">1st Year</option>
+									<option value="2nd year">2nd Year</option>
+									<option value="3rd year">3rd Year</option>
+									<option value="4th year">4th Year</option>
+									<option value="5th year">5th Year</option>
+								</select>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- form end -->
+				<!-- Academic start -->
+				<div class="row  mt-3 ">
+					<div class="col-sm-10 mx-auto">
+						<h3 class="fw-bold">Academic Details</h3>
+						<div class="row pt-4">
+							<div class="col-sm-12 p-5 mx-auto shadow-lg p-3 ">
+								<div class="row pb-4">
+									<h4 class="fw-bold" style="color:#EF662F;">Performance</h4>
+									<hr>
+									<div class="col-md-6 mt-3">
+										<label for="Enrollment" class="form-label"><b class="mt-4">10th Percentage
+												*</b></label>
+										<input type="text"
+											class="form-control border border-1 border-dark rounded-0 py-2 mt-2"
+											id="enrollment" placeholder="10th Percentage" th:field="${sd.highschool}">
+									</div>
+									<div class="col-md-6 mt-3">
+										<label for="Name" class="form-label"><b class="mt-4">12th Percentage
+												*</b></label>
+										<input type="text"
+											class="form-control border border-1 border-dark rounded-0 py-2 mt-2"
+											id="enrollment" placeholder="12th Percentage" th:field="${sd.intermediate}">
+									</div>
+								</div>
+								<div class="row pb-4">
+									<div class="col-md-12">
+										<label for="Enrollment" class="form-label"><b class="mt-4">AggregateMarks
+												*</b></label>
+										<input type="text"
+											class="form-control border border-1 border-dark rounded-0 py-2 mt-2"
+											id="enrollment" placeholder="Enter Your Aggregate Marks"
+											th:field="${sd.aggregatemarks}">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row  mt-3 ">
+					<div class="col-sm-10 mx-auto">
+						<h3 class="fw-bold">Training Details</h3>
+
+						<div class="row pt-4">
+							<div class="col-sm-12 p-5 mx-auto shadow-lg ">
+
+								<div class="row pb-4">
+
+									<div class="col-md-6">
+										<label for="Enrollment" class="form-label"><b class="mt-4">Do you want to
+												register for *</b></label>
+										<select class="form-select border border-1 border-dark rounded-0 py-2 mt-2"
+											aria-label="Default select example" th:field="${sd.trainingmode}">
+											<option value="">-Select Training Mode-</option>
+											<option value="1">Online</option>
+											<option value="2">Offline</option>
+
+										</select>
+									</div>
+									<div class="col-md-6">
+										<label for="Enrollment" class="form-label"><b class="mt-4">What Is Your
+												Perferred Training Location *</b></label>
+										<select class="form-select border border-1 border-dark rounded-0 py-2 mt-2"
+											aria-label="Default select example" th:field="${sd.traininglocation}">
+											<option value="">-Select Location-</option>
+											<option value="1">Softpro House, Jankipuram, Near Gudamba Thana</option>
+											<option value="2">Softpro India Skill Development Center, greater Noida
+											</option>
+											<option value="3">Softpro india Full stack Academy, Chinhat Tiraha, Gomti
+												Nagar, Lucknow</option>
+											<option value="4">Polyprep-LMS(Online platform)</option>
+										</select>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+				<!-- Academic end -->
+				<!-- checkbox start -->
+				<div class="row">
+					<div class="col-sm-10 mx-auto mt-4 mb-3">
+						<input type="checkbox">
+						<span class=" fw-bold"
+							style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">I
+							hereby declare that the particulars provided in the form are correct and I duly agree to the
+							Privacy Policy of the company.
+						</span>
+					</div>
+				</div>
+				<!-- checkbox end -->
+				<!-- submit & reset start -->
+				<div class="row">
+					<div class="col-sm-10 mx-auto mt-3 mb-3 text-end">
+						<input type="submit" value="SUBMIT"
+							style="background-color: #EF662F; color: white; border: 0px;font-size: 16px; font-weight: 800; height:50px;  width:150px;">
+						<input type="reset" value="Reset"
+							style="background-color: dimgrey; color: white; border: 0px;font-size: 16px; font-weight: 800; height:50px; width:150px;">
+					</div>
+				</div>
+				<!--submit& reset end  -->
+			</form>
+		</div>
+
+	</section>
+	 
+</body>
+
+</html>

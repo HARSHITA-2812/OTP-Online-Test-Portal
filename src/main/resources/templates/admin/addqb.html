@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" th:replace="admin/adminbase::layout(~{::section})">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Online Test Portal</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+	<section>
+		<h3 style="color: orangered;  text-align: center;"> Add Questions...</h3>
+		<div th:if="${msg}">
+			<p th:text="${msg}" style="color: green; text-align: center;"></p>
+
+		</div>
+		<form class="form-group" method="post" th:object="${dto}">
+
+			<table class="table table-bordered" style="width: 80%; margin: auto;">
+				<tr>
+					<td>Select Year</td>
+					<td>
+						<select class="form-select border border-1 border-dark rounded-0 py-2 mt-2"
+							aria-label="Default select example" th:field="${dto.year}">
+							<option value="">-Select Year-</option>
+							<option value="1st year">1st Year</option>
+							<option value="2nd year">2nd Year</option>
+							<option value="3rd year">3rd Year</option>
+							<option value="4th year">4th Year</option>
+							<option value="5th year">5th Year</option>
+
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Enter Question</td>
+					<td>
+						<textarea class="form-control" th:field="${dto.question}" required></textarea>
+					</td>
+				</tr>
+
+				<tr>
+					<td>A</td>
+					<td>
+						<textarea class="form-control" th:field="${dto.a}" required></textarea>
+					</td>
+				</tr>
+
+				<tr>
+					<td>B</td>
+					<td>
+						<textarea class="form-control" th:field="${dto.b}" required></textarea>
+					</td>
+				</tr>
+
+				<tr>
+					<td>C</td>
+					<td>
+						<textarea class="form-control" th:field="${dto.c}" required></textarea>
+					</td>
+				</tr>
+
+				<tr>
+					<td>D</td>
+					<td>
+						<textarea class="form-control" th:field="${dto.d}" required></textarea>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Correct Option</td>
+					<td>
+						<select class="form-control" th:field="${dto.correct}">
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>
+						<button type="submit" class="btn btn-success">Add Question</button>
+					</td>
+				</tr>
+
+			</table>
+
+		</form>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
+	</section>
+</body>
+
+</html>
